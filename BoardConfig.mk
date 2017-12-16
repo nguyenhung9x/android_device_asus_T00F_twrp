@@ -40,9 +40,6 @@ NEED_KERNEL_MODULE_ROOT := true
 TARGET_PREBUILT_KERNEL := device/asus/T00F/kernel
 BOARD_KERNEL_CMDLINE := init=/init pci=noearly console=ttyS0 console=logk0 earlyprintk=nologger bootup.uart=0 loglevel=8 kmemleak=off androidboot.selinux=permissive androidboot.bootmedia=sdcard androidboot.hardware=redhookbay watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 ip=50.0.0.2:50.0.0.1::255.255.255.0::usb0:on vmalloc=172M
 
-TARGET_RECOVERY_UPDATER_LIBS += libosip_updater
-TARGET_RECOVERY_UPDATER_EXTRA_LIBS += libintel_updater liboempartitioning_static
-
 # Adb
 BOARD_FUNCTIONFS_HAS_SS_COUNT := true
 
@@ -76,7 +73,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_FSTAB := device/asus/T00F/rootdir/etc/fstab.redhookbay 
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp intel_prop thermald upi_ug31xx
 
 # TWRP
 TW_INPUT_BLACKLIST := "accelerometer\x0akxtj9_accel"
